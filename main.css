@@ -41,10 +41,7 @@ li a:hover {
 header {
     background: #d2d4dc;
     color: #f8f8fa;
-    height: 25%;
-}
-
-header {
+    height: 10vh;
     padding: 1em;
 }
 
@@ -55,6 +52,7 @@ header h2 {
 #header-text {
     float: left;
     margin-top: 10px;
+    margin-left: 20%;
 }
 
 

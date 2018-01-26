@@ -61,7 +61,7 @@ header h2 {
 
 /* Main body */
 
-rightcol {
+#rightcol {
     margin-left: 15%;
     padding: 1px 16px;
     height: 1000px;

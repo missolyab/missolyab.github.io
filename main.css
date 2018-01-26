@@ -61,13 +61,13 @@ header h2 {
 
 /* Main body */
 
-info-body {
+rightcol {
     margin-left: 15%;
     padding: 1px 16px;
     height: 1000px;
 }
 
-#info-text {
+#rightcoltext {
     float: left;
     margin-top: 10px;
 }

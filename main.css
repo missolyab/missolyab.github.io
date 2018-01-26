@@ -2,8 +2,11 @@ body, header {
     margin: 0;
 }
 
-body {
-    color: #e5e6eb;
+info-body {
+    margin-left:15%;
+    padding:1px 16px;
+    height:1000px;
+    background-color: #e5e6eb;
 }
 
 /* Navigation Menu */

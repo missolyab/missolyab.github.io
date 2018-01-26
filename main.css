@@ -41,6 +41,10 @@ header {
     padding: 1em;
 }
 
+header h2 {
+    margin-left: 20%;
+}
+
 #header-text {
     float: left;
     margin-top: 10px;

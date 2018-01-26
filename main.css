@@ -55,7 +55,7 @@ header h2 {
     float: left;
     width: 50%;
     margin-top: 5px;
-    margin-left: 10%;
+    margin-left: 15%;
 }
 
 
@@ -65,11 +65,6 @@ rightcol {
     margin-left: 15%;
     padding: 1px 16px;
     height: 1000px;
-}
-
-#rightcoltext {
-    float: left;
-    margin-top: 10px;
 }
     
 

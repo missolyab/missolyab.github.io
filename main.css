@@ -47,13 +47,13 @@ header {
 }
 
 header h2 {
-    margin-left: 20%;
+    margin-left: 10%;
 }
 
 #header-text {
     float: left;
     width: 50%;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left: 10%;
 }
 

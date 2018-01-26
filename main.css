@@ -1,4 +1,4 @@
-body {
+body, header {
     margin: 0;
 }
 
@@ -27,4 +27,21 @@ li a {
 li a:hover {
     background-color: #555;
     color: white;
+}
+
+/* Header */
+
+header {
+    background: #2b2d41;
+    color: white;
+    height: 20vh;
+}
+
+header {
+    padding: 1em;
+}
+
+#header-text {
+    float: left;
+    margin-top: 10px;
 }

@@ -65,5 +65,12 @@ header h2 {
     padding: 1px 16px;
     height: 1000px;
 }
+
+#rightcol img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
     
 

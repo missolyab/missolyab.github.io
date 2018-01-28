@@ -49,8 +49,7 @@ header {
 
 header h2 {
     margin-left: 10%;
-    margin-top: auto;
-    margin-bottom: auto;
+    vertical-align: middle;
 }
 
 #header-text {

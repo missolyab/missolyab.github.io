@@ -12,7 +12,7 @@ body {
 
 /* Navigation Menu */
 
-ul {
+ul.nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -36,6 +36,10 @@ li a {
 li a:hover {
     background-color: #afafaf;
     color: white;
+}
+    
+ul.pups {
+    list-style-type: circle;
 }
 
 /* Header */
@@ -88,6 +92,17 @@ header h2 {
     width: 70%;
 }
 
+#rightcol3 {
+}
+
+#rightcol3 img {
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
 /* Table */
 
 #dogs {
@@ -116,21 +131,4 @@ header h2 {
     text-align: left;
     background-color: #888390;
     color: white;
-}
-
-/* Lists */
-
-.pups {
-    float: left;
-}
-    
-.pups ul {
-    list-style-type: circle;
-}
-
-.pups img {
-    display: inline;
-    margin-top: 10px;
-    width: 40%;
-    float: left;
 }

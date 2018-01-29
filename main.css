@@ -121,7 +121,7 @@ header h2 {
 /* Lists */
 
 .pups {
-    display: inline;
+    float: left;
 }
     
 .pups ul {
@@ -133,10 +133,4 @@ header h2 {
     margin-top: 10px;
     width: 40%;
     float: left;
-}
-
-.pups div {
-  width: 95%;
-  padding: 10px;
-  overflow: hidden;
 }

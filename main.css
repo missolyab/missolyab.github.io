@@ -73,6 +73,10 @@ header h2 {
     width: 40%;
 }
 
+#rightcol ul {
+    list-style-type: circle;
+}
+
 #rightcol2 {
     margin-left: 15%;
     padding: 1px 16px;
@@ -116,4 +120,3 @@ header h2 {
     background-color: #888390;
     color: white;
 }
-

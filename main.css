@@ -101,10 +101,11 @@ header h2 {
 
 #rightcol3 img {
     display: inline-block;
+    align: center;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    height: 40px;
+    height: 30%;
     width: auto;
 }
 

@@ -73,7 +73,7 @@ header h2 {
     width: 40%;
 }
 
-#rightcol ul {
+ul rightcol {
     list-style-type: circle;
 }
 

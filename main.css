@@ -120,17 +120,11 @@ header h2 {
 
 /* Lists */
 
-.rightcolumn {
-    margin-left: 15%;
-    padding: 1px 16px;
-    height: auto;
-}
-
-.rightcolumn ul {
+.pups ul {
     list-style-type: circle;
 }
 
-.rightcolumn img {
+.pups img {
     display: block;
     margin-top: 10px;
     margin-left: auto;

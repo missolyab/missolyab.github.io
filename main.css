@@ -3,7 +3,6 @@ body, header {
 }
 
 body {
-    display: flex;
     background-color: #e5e6eb;
     color: #333333;
     font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;

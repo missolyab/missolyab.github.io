@@ -2,9 +2,6 @@
 // this is just a stub for a function you need to implement
 //
 function getStats(txt) {
-	
-	
-	
     return {
         nChars: 123,
         nWords: 22,
@@ -17,6 +14,7 @@ function getStats(txt) {
         mostFrequentWords: ["hello(7)", "world(1)"]
     };
 }
+
 
 
 // /* Total number of characters */

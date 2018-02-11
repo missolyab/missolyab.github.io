@@ -18,26 +18,26 @@ function getStats(txt) {
     };
 }
 
-/*
-/* Total number of characters */
 
-function numChars(txt) {
-	return str.length;
-}
+// /* Total number of characters */
+
+// function numChars(txt) {
+// 	return str.length;
+// }
 
 
-/* Total number of words */
+// /* Total number of words */
 
-function numWords(txt) {
-	var count = 0,
-	i,
-	words = txt.length;
+// function numWords(txt) {
+// 	var count = 0,
+// 	i,
+// 	words = txt.length;
 
-	for (n = 0; n<= words; n++) {
-		if (txt.charAt(n) === " ") {
-			count++;
-		}
-	}	
-	return console.log(count + 1);
-}
-*/
+// 	for (n = 0; n<= words; n++) {
+// 		if (txt.charAt(n) === " ") {
+// 			count++;
+// 		}
+// 	}	
+// 	return console.log(count + 1);
+// }
+

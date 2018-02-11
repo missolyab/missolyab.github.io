@@ -4,7 +4,7 @@
 function getStats(txt) {
     let display = {
         nChars: numChars(txt),
-        nWords: 22,
+        nWords: numWords(txt),
         nLines: 10,
         nNonEmptyLines: 22,
         averageWordLength: 3.3,
@@ -35,7 +35,7 @@ function numWords(txt) {
 		}
 	}
 	
-	let total = console.log(count + 1);
+	let total = count + 1;
 	return total;
 }
 

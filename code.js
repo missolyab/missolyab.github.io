@@ -2,7 +2,7 @@
 // this is just a stub for a function you need to implement
 //
 function getStats(txt) {
-    let display {
+    let display = {
         nChars: numChars(txt),
         nWords: 22,
         nLines: 10,

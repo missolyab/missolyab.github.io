@@ -19,6 +19,6 @@ function getStats(txt) {
 /* Total number of characters */
 
 function numChars(txt) {
-	return str.length;
+	return txt.length;
 }
 

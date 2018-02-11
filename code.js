@@ -2,7 +2,7 @@
 // this is just a stub for a function you need to implement
 //
 function getStats(txt) {
-    return {
+    let display {
         nChars: numChars(txt),
         nWords: 22,
         nLines: 10,
@@ -13,6 +13,7 @@ function getStats(txt) {
         longestWords: ["xxxxxxxxx", "123444444"],
         mostFrequentWords: ["hello(7)", "world(1)"]
     };
+	return display;
 }
 
 /* Total number of characters */

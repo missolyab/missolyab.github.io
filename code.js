@@ -26,16 +26,19 @@ function numChars(txt) {
 /* Total number of words */
 
 function numWords(txt) {
-	var count = 0,
-	i,
-	words = txt.length;
+	var count = 0;
+	var n;
+	var words = txt.length;
+	var total;
 
 	for (n = 0; n<= words; n++) {
 		if (txt.charAt(n) === " ") {
 			count++;
 		}
 	}
-	return console.log(count + 1);
+	
+	total = console.log(count + 1);
+	return total;
 }
 
 

@@ -22,3 +22,21 @@ function numChars(txt) {
 	return txt.length;
 }
 
+
+/* Total number of words */
+
+function numWords(txt) {
+	
+	var count = 0,
+	i,
+	words = txt.length;
+
+	for (n = 0; n<= words; n++) {
+		if (txt.charAt(n) === " ") {
+			count++;
+		}
+	}
+	return console.log(count + 1);
+}
+
+

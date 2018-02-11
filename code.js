@@ -2,6 +2,9 @@
 // this is just a stub for a function you need to implement
 //
 function getStats(txt) {
+	
+	
+	
     return {
         nChars: numChars(txt),
         nWords: numWords(txt),

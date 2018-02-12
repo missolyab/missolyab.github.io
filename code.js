@@ -5,7 +5,7 @@ function getStats(txt) {
     let display = {
         nChars: numChars(txt),
         nWords: numWords(txt),
-        nLines: 10,
+        nLines: numLines(txt),
         nNonEmptyLines: 22,
         averageWordLength: 3.3,
         maxLineLength: 33,

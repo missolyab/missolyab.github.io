@@ -128,11 +128,11 @@ function tenLongestWords(txt) {
 		}
 	}
 
+	list.reverse();
+	
 	while (list.length > 10) {
 		list.pop();
 	}
-	
-	//list.reverse();
 
 	return list;
 }

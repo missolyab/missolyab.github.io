@@ -143,8 +143,10 @@ function tenLongestWords(txt) {
 function tenMostFrequesnt(txt) {
 	
 	let count = 0;
+	let order = [];
 	let list = [];
-	let result = [];
+	let output = [];
+	let result = {};
 	let words = txt.match(/\b(\w+)\b/g);
 
 	for (let i = 0; i < words.length; i++) {
@@ -153,8 +155,15 @@ function tenMostFrequesnt(txt) {
 
 	words.sort();
 
-	// count the number of times each elements of the non-doubles array occurs in a doubles array and push it into a new array
-	//
+	// Object with each word and its count
+	
+	for (let k = 0, l = words.length; k < l; k++) {
+   		result[words[k]] = (result[words[k]] || 0) + 1;
+	}
+
+
+	// Count the number of times each element of the non-doubles array occurs in a doubles array and push it into a new array
+
 	
 	// Get rid of doubles for array 1
 	
@@ -164,23 +173,39 @@ function tenMostFrequesnt(txt) {
 		}
 	}
 
+	
 	// Count how many times a word appears
 
-    	for (let n = 0; n < list.length; n++) { // itirating through LIST non-doubles array
-		for (let m = 0; m < words.length; m++) { // itirating through WORDS doubles array
+    	for (let n = 0; n < list.length; n++) { // itirating through sorted LIST non-doubles array
+		for (let m = 0; m < words.length; m++) { // itirating through sorted WORDS doubles array
 			if (words[m] === list[n]) {
             		count++;
 			}
         	}
-		result.push(list[n] + "(" + count + ")");
+		order.push(count);
 		count = 0;
 	}
-	
-	while (result.length > 10) {
-		result.pop();
+
+	// Array of sorted numbers in descending order
+	order.sort(function(a, b){return b-a});
+
+	// Only 10 highhest counts left
+	while (order.length > 10) {
+		order.pop();
 	}
 
-	return result;
+	// Match the numbers to the numbers in the object and push it into an array
+	
+	for (let j = 0; j < order.length; j++) {
+		for (let c = 0; c < result.length; c++) {
+			if (result[words[k]] === order[j]) {
+				output.push(words[k] + "(" + order[j] + ")");
+			}
+		}
+	}
+
+	return output;
 }
+
 
 

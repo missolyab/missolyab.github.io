@@ -26,17 +26,8 @@ function numChars(txt) {
 /* Total number of words */
 
 function numWords(txt) {
-	let count = 0;
-	let words = txt.length;
-
-	for (let n = 0; n <= words; n++) {
-		if (txt.charAt(n) === " ") {
-			count++;
-		}
-	}
-	
-	let total = count + 1;
-	return total;
+	let words = txt.match(/\b(\w+)\b/g);
+	return words.length;
 }
 
 

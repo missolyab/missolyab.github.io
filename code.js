@@ -47,15 +47,46 @@ function numLines(txt) {
 /* Number of nonempty lines */
 
 function numNonEmptyLines(txt) {
-
 	let numLines = 0;
 	let lines = txt.split("\n");
-	
+	txt.replace(/\s/g, "");
+
 	for (let i = 0; i < lines.length; i++) {
   		if (lines[i].length > 0) {
 			numLines++;
 		}
 	}
 	return numLines;
+}
+
+
+/* Length of the longest line */
+
+function longestLine(txt) {
+	let longestLine = 0;
+	let lines = txt.split("\n");
+
+	for (let n = 0; n < lines.length; n++) {
+		if (lines[n].length > longestLine) {
+			longestLine = lines[n].length;
+		}
+	}
+	return longestLine;
+}
+
+
+
+/* Length of the longest line */
+
+function longestLine(txt) {
+	let longestLine = 0;
+	let lines = txt.split("\n");
+
+	for (let n = 0; n < lines.length; n++) {
+		if (lines[n].length > longestLine) {
+			longestLine = lines[n].length;
+		}
+	}
+	return longestLine;
 }
 

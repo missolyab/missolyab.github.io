@@ -161,50 +161,11 @@ function tenMostFrequesnt(txt) {
    		result[words[k]] = (result[words[k]] || 0) + 1;
 	}
 
-
-	// Count the number of times each element of the non-doubles array occurs in a doubles array and push it into a new array
-
+	let keysSorted = [];
+	keysSorted = Object.keys(result).sort(function(a,b){return result[b]-result[a]});
 	
-	// Get rid of doubles for array 1
 	
-	for(let i = 0; i < words.length; i++){
-		if(list.indexOf(words[i]) == -1){
-			list.push(words[i]);
-		}
-	}
-
-	
-	// Count how many times a word appears
-
-    	for (let n = 0; n < list.length; n++) { // itirating through sorted LIST non-doubles array
-		for (let m = 0; m < words.length; m++) { // itirating through sorted WORDS doubles array
-			if (words[m] === list[n]) {
-            		count++;
-			}
-        	}
-		order.push(count);
-		count = 0;
-	}
-
-	// Array of sorted numbers in descending order
-	order.sort(function(a, b){return b-a});
-
-	// Only 10 highhest counts left
-	while (order.length > 10) {
-		order.pop();
-	}
-
-	// Match the numbers to the numbers in the object and push it into an array
-	
-	for (let j = 0; j < order.length; j++) {
-		for (let c = 0; c < result.length; c++) {
-			if (result[words[k]] === order[j]) {
-				output.push(words[k] + "(" + order[j] + ")");
-			}
-		}
-	}
-
-	return output;
+	return keysSorted;
 }
 
 

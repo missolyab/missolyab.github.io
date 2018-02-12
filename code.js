@@ -114,22 +114,22 @@ function tenLongestWords(txt) {
 	let list = [];
 	let words = txt.match(/\b(\w+)\b/g);
 
-	words.sort();
-  	words.sort(function(a,b) {
-  		return b.length - a.length;
- 		 });
-
-	for (let i = 0; i < words.length; i++) {
-		words[i] = words[i].toLowerCase();
-	}
-
 	for(let i = 0; i < words.length; i++){
 		if(list.indexOf(words[i]) == -1){
 			list.push(words[i]);
 		}
 	}
+	
+	for (let i = 0; i < list.length; i++) {
+		list[i] = list[i].toLowerCase();
+	}
+	
+	list.sort();
+  	list.sort(function(a,b) {
+  		return b.length - a.length;
+ 		 });
 
-	list.reverse();
+	//list.reverse();
 	
 	while (list.length > 10) {
 		list.pop();

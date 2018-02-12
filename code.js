@@ -141,7 +141,7 @@ function tenLongestWords(txt) {
 /* 10 most frequent words */
 
 function tenMostFrequent(txt) {
-	
+	let count = 0;
 	let keysSorted = [];
 	let list = [];
 	let result = {};
@@ -166,13 +166,13 @@ function tenMostFrequent(txt) {
 	// Count how many times a word appears
 
     	for (let a = 0; a < keysSorted.length; a++) { // itirating through keysSorted non-doubles array
-	/*	for (let b = 0; b < words.length; b++) { // itirating through WORDS doubles array
-			if (words[b] === keysSorted[a]) { */
+		for (let b = 0; b < words.length; b++) { // itirating through WORDS doubles array
+			if (words[b] === keysSorted[a]) { 
             		count++;
 			}
-        /*	} */
+        	} 
 		list.push(keysSorted[a] + "(" + count + ")");
-	/*	count = 0; */
+		count = 0; 
 	}
 	
 	return list;

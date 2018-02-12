@@ -111,16 +111,22 @@ function listPalindromes(txt) {
 /* 10 longest words */
 
 function tenLongestWords(txt) {
+	let list = [];
 	let words = txt.match(/\b(\w+)\b/g);
 
 	words.sort(function(a, b) {
   			return a.length - b.length || [a,b].sort()[0]===b;
 			});
 	words.reverse();
+	let list = Array.from(new Set(words));
 
-	while (words.length > 10) {
-		words.pop();
+	for (let i = 0; i < list.length; i++) {
+		list[i] = list[i].toLowerCase();
 	}
-	return words;
+	while (list.length > 10) {
+		list.pop();
+	}
+	return list;
 }
+
 

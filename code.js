@@ -47,7 +47,15 @@ function numLines(txt) {
 /* Number of nonempty lines */
 
 function numNonEmptyLines(txt) {
-	let lines = (txt.match(/\r?\n/g) || '').length + 1;
-	return lines;
+
+	let numLines = 0;
+	let lines = $(this).val().split("\n");
+
+	for (let i = 0; i < lines.length; i++) {
+  		if (lines[i].length > 0) {
+			numLines++;
+		}
+	}
+	return numLines;
 }
 

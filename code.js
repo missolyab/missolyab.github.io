@@ -10,7 +10,7 @@ function getStats(txt) {
 	maxLineLength: longestLine(txt),
         averageWordLength: avgWordLength(txt),
         palindromes: listPalindromes(txt),
-        longestWords: ["xxxxxxxxx", "123444444"],
+        longestWords: tenLongestWords(txt),
         mostFrequentWords: ["hello(7)", "world(1)"]
     };
 	return display;
@@ -105,5 +105,22 @@ function listPalindromes(txt) {
 		}
 	}
 	return list;
+}
+
+
+/* 10 longest words */
+
+function tenLongestWords(txt) {
+	let words = txt.match(/\b(\w+)\b/g);
+
+	words.sort(function(a, b) {
+  			return a.length - b.length || [a,b].sort()[0]===b;
+			});
+	words.reverse();
+
+	while (words.length > 10) {
+		words.pop();
+	}
+	return words;
 }
 

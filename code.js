@@ -99,9 +99,11 @@ function listPalindromes(txt) {
 	for (let n = 0; n < words.length; n++) {
 		if (words[n].length > 2) {
 			if (words[n].toLowerCase() === words[n].toLowerCase().split('').reverse().join('')) {
-				list.push(words[n].toLowerCase());
+				let palindrome = words[n].toLowerCase();
+				list.push(palindrome);
 			}
 		}
 	}
 	return list;
 }
+

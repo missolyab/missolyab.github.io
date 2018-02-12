@@ -138,5 +138,49 @@ function tenLongestWords(txt) {
 	return list;
 }
 
+/* 10 most frequent words */
+
+function tenMostFrequesnt(txt) {
+	
+	let count = 0;
+	let list = [];
+	let result = [];
+	let words = txt.match(/\b(\w+)\b/g);
+
+	for (let i = 0; i < words.length; i++) {
+		words[i] = words[i].toLowerCase();
+	}
+
+	words.sort();
+
+	// count the number of times each elements of the non-doubles array occurs in a doubles array and push it into a new array
+	//
+	
+	// Get rid of doubles for array 1
+	
+	for(let i = 0; i < words.length; i++){
+		if(list.indexOf(words[i]) == -1){
+			list.push(words[i]);
+		}
+	}
+
+	// Count how many times a word appears
+
+    	for (let n = 0; n < list.length; n++) { // itirating through LIST non-doubles array
+		for (let m = 0; m < words.length; m++) { // itirating through WORDS doubles array
+			if (words[m] === list[n]) {
+            		count++;
+			}
+        	}
+		result.push(list[n] + "(" + count + ")");
+		count = 0;
+	}
+	
+	while (result.length > 10) {
+		result.pop();
+	}
+
+	return result;
+}
 
 

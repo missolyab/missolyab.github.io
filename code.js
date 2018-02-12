@@ -150,7 +150,7 @@ function tenMostFrequesnt(txt) {
 		words[i] = words[i].toLowerCase();
 	}
 
-	//words.sort();
+	words.sort();
 	
 	for (let k = 0, l = words.length; k < l; k++) {
    		result[words[k]] = (result[words[k]] || 0) + 1;

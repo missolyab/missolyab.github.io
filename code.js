@@ -11,7 +11,7 @@ function getStats(txt) {
         averageWordLength: avgWordLength(txt),
         palindromes: listPalindromes(txt),
         longestWords: tenLongestWords(txt),
-        mostFrequentWords: ["hello(7)", "world(1)"]
+        mostFrequentWords: tenMostFrequesnt(txt)
     };
 	return display;
 }

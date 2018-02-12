@@ -6,7 +6,7 @@ function getStats(txt) {
         nChars: numChars(txt),
         nWords: numWords(txt),
         nLines: numLines(txt),
-        nNonEmptyLines: 22,
+        nNonEmptyLines: numNonEmptyLines(txt),
         averageWordLength: 3.3,
         maxLineLength: 33,
         palindromes: ["12321", "kayak", "mom"],
@@ -42,4 +42,12 @@ function numLines(txt) {
 		}
 	}
 	return lines;
+}
+
+/* Number of nonempty lines */
+
+function numNonEmptyLines(txt) {
+	txt = ["  a", "b", "", "c", "", "", "   d  "].join("\n");
+	let count = (txt.match(/^\s*\S/gm) || "").length;
+	return count;
 }

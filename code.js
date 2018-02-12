@@ -164,18 +164,18 @@ function tenMostFrequent(txt) {
 	}
 	
 	// Count how many times a word appears
-/*
-    	for (let n = 0; n < keysSorted.length; n++) { // itirating through keysSorted non-doubles array
-		for (let m = 0; m < words.length; m++) { // itirating through WORDS doubles array
-			if (words[m] === keysSorted[n]) {
+
+    	for (let a = 0; a < keysSorted.length; a++) { // itirating through keysSorted non-doubles array
+	/*	for (let b = 0; b < words.length; b++) { // itirating through WORDS doubles array
+			if (words[b] === keysSorted[a]) { */
             		count++;
 			}
-        	}
-		list.push(keysSorted[n] + "(" + count + ")");
-		count = 0;
+        /*	} */
+		list.push(keysSorted[a] + "(" + count + ")");
+	/*	count = 0; */
 	}
-	*/
-	return words.length;
+	
+	return list;
 }
 
 

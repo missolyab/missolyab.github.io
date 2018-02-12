@@ -118,15 +118,17 @@ function tenLongestWords(txt) {
   			return a.length - b.length || [a,b].sort()[0]===b;
 			});
 	words.reverse();
-	let list = Array.from(new Set(words));
+	
+	for (let i = 0; i < words.length; i++) {
+		words[i] = words[i].toLowerCase();
+	}
+	
+//	let list = Array.from(new Set(words));
 
-	for (let i = 0; i < list.length; i++) {
-		list[i] = list[i].toLowerCase();
+	while (words.length > 10) {
+		words.pop();
 	}
-	while (list.length > 10) {
-		list.pop();
-	}
-	return list;
+	return words;
 }
 
 

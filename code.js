@@ -11,7 +11,7 @@ function getStats(txt) {
         averageWordLength: avgWordLength(txt),
         palindromes: listPalindromes(txt),
         longestWords: tenLongestWords(txt),
-        mostFrequentWords: tenMostFrequesnt(txt)
+        mostFrequentWords: tenMostFrequent(txt)
     };
 	return display;
 }
@@ -140,7 +140,7 @@ function tenLongestWords(txt) {
 
 /* 10 most frequent words */
 
-function tenMostFrequesnt(txt) {
+function tenMostFrequent(txt) {
 	
 	let keysSorted = [];
 	let list = [];
@@ -164,8 +164,14 @@ function tenMostFrequesnt(txt) {
 	}
 	
 	// Count how many times a word appears
+	
+	words = txt.match(/\b(\w+)\b/g);
+	for (let i = 0; i < words.length; i++) {
+		words[i] = words[i].toLowerCase();
+	}
+	words.sort();
 
-    	for (let n = 0; n < keysSorted.length; n++) { // itirating through LIST non-doubles array
+    	for (let n = 0; n < keysSorted.length; n++) { // itirating through keysSorted non-doubles array
 		for (let m = 0; m < words.length; m++) { // itirating through WORDS doubles array
 			if (words[m] === keysSorted[n]) {
             		count++;
@@ -174,9 +180,6 @@ function tenMostFrequesnt(txt) {
 		list.push(keysSorted[n] + "(" + count + ")");
 		count = 0;
 	}
-
-	
-	
 	return list;
 }
 

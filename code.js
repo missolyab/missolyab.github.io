@@ -47,7 +47,7 @@ function numLines(txt) {
 /* Number of nonempty lines */
 
 function numNonEmptyLines(txt) {
-	txt = ["  a", "b", "", "c", "", "", "   d  "].join("\n");
-	let count = (txt.match(/^\s*\S/gm) || "").length;
-	return count;
+	let lines = (txt.match(/\r?\n/g) || '').length + 1;
+	return lines;
 }
+

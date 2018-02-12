@@ -115,7 +115,7 @@ function tenLongestWords(txt) {
 	let words = txt.match(/\b(\w+)\b/g);
 
 	words.sort(function(a, b) {
-  			return a.length - b.length || [a,b].sort()[0]===b;
+  			return a.length - b.length || a.localeCompare(b)
 			});
 	words.reverse();
 	

@@ -132,7 +132,7 @@ function tenLongestWords(txt) {
 		list.pop();
 	}
 	
-	list.reverse();
+	//list.reverse();
 
 	return list;
 }

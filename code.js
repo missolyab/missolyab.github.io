@@ -8,7 +8,7 @@ function getStats(txt) {
         nLines: numLines(txt),
         nNonEmptyLines: numNonEmptyLines(txt),
 	maxLineLength: longestLine(txt),
-        averageWordLength: 3.3,
+        averageWordLength: avgWordLength(txt),
         palindromes: ["12321", "kayak", "mom"],
         longestWords: ["xxxxxxxxx", "123444444"],
         mostFrequentWords: ["hello(7)", "world(1)"]
@@ -73,4 +73,18 @@ function longestLine(txt) {
 		}
 	}
 	return longestLine;
+}
+
+/* Average word length */
+
+function avgWordLength(txt) {
+	let charSum = 0;
+	let words = txt.match(/\b(\w+)\b/g);
+	let numWords = words.length;
+
+	for (let n = 0; n < words.length; n++) {
+		charSum = charSum + words[n].length;
+	}
+	let avgLength = charSum/numWords;
+	return avgLength;
 }

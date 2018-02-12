@@ -9,7 +9,7 @@ function getStats(txt) {
         nNonEmptyLines: numNonEmptyLines(txt),
 	maxLineLength: longestLine(txt),
         averageWordLength: avgWordLength(txt),
-        palindromes: ["12321", "kayak", "mom"],
+        palindromes: listPalindromes(txt),
         longestWords: ["xxxxxxxxx", "123444444"],
         mostFrequentWords: ["hello(7)", "world(1)"]
     };
@@ -87,4 +87,21 @@ function avgWordLength(txt) {
 	}
 	let avgLength = charSum/numWords;
 	return avgLength;
+}
+
+
+/* List of palindromes */
+
+function listPalindromes(txt) {
+	let list = [];
+	let words = txt.match(/\b(\w+)\b/g);
+
+	for (let n = 0; n < words.length; n++) {
+		if (words[n].length > 2) {
+			if (words[n] === words[n].split('').reverse().join('')) {
+				list.push(words[n].toLowerCase());
+			}
+		}
+	}
+	return list;
 }

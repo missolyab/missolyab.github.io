@@ -48,8 +48,8 @@ function numLines(txt) {
 
 function numNonEmptyLines(txt) {
 	let numLines = 0;
+	txt = txt.replace(/\s/g, "");
 	let lines = txt.split("\n");
-	txt.replace(/\s/g, "");
 
 	for (let i = 0; i < lines.length; i++) {
   		if (lines[i].length > 0) {

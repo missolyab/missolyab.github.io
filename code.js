@@ -1,6 +1,7 @@
 //
 // this is just a stub for a function you need to implement
 //
+
 function getStats(txt) {
     let display = {
         nChars: numChars(txt),
@@ -162,11 +163,9 @@ function tenMostFrequent(txt) {
 	while (keysSorted.length > 10) {
 		keysSorted.pop();
 	}
-	
-	// Count how many times a word appears
 
-    	for (let a = 0; a < keysSorted.length; a++) { // itirating through keysSorted non-doubles array
-		for (let b = 0; b < words.length; b++) { // itirating through WORDS doubles array
+    	for (let a = 0; a < keysSorted.length; a++) {
+		for (let b = 0; b < words.length; b++) {
 			if (words[b] === keysSorted[a]) { 
             		count++;
 			}
@@ -174,9 +173,5 @@ function tenMostFrequent(txt) {
 		list.push(keysSorted[a] + "(" + count + ")");
 		count = 0; 
 	}
-	
 	return list;
 }
-
-
-

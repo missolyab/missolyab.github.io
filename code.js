@@ -7,6 +7,7 @@ function getStats(txt) {
         nWords: numWords(txt),
         nLines: numLines(txt),
         nNonEmptyLines: numNonEmptyLines(txt),
+	maxLineLength: longestLine(txt),
         averageWordLength: 3.3,
         maxLineLength: 33,
         palindromes: ["12321", "kayak", "mom"],
@@ -73,20 +74,3 @@ function longestLine(txt) {
 	}
 	return longestLine;
 }
-
-
-
-/* Length of the longest line */
-
-function longestLine(txt) {
-	let longestLine = 0;
-	let lines = txt.split("\n");
-
-	for (let n = 0; n < lines.length; n++) {
-		if (lines[n].length > longestLine) {
-			longestLine = lines[n].length;
-		}
-	}
-	return longestLine;
-}
-

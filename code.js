@@ -49,8 +49,8 @@ function numLines(txt) {
 function numNonEmptyLines(txt) {
 
 	let numLines = 0;
-	let lines = $(this).val().split("\n");
-
+	let lines = txt.split("\n");
+	
 	for (let i = 0; i < lines.length; i++) {
   		if (lines[i].length > 0) {
 			numLines++;

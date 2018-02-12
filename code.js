@@ -175,7 +175,7 @@ function tenMostFrequent(txt) {
 		count = 0;
 	}
 	*/
-	return keysSorted.length;
+	return words.length;
 }
 
 

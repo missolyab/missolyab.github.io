@@ -142,10 +142,7 @@ function tenLongestWords(txt) {
 
 function tenMostFrequesnt(txt) {
 	
-	let count = 0;
-	let order = [];
-	let list = [];
-	let output = [];
+	let keysSorted = [];
 	let result = {};
 	let words = txt.match(/\b(\w+)\b/g);
 
@@ -153,16 +150,17 @@ function tenMostFrequesnt(txt) {
 		words[i] = words[i].toLowerCase();
 	}
 
-	words.sort();
-
-	// Object with each word and its count
+	//words.sort();
 	
 	for (let k = 0, l = words.length; k < l; k++) {
    		result[words[k]] = (result[words[k]] || 0) + 1;
 	}
 
-	let keysSorted = [];
 	keysSorted = Object.keys(result).sort(function(a,b){return result[b]-result[a]});
+	
+	while (keysSorted.length > 10) {
+		keysSorted.pop();
+	}
 	
 	
 	return keysSorted;

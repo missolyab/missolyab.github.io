@@ -31,3 +31,15 @@ function numWords(txt) {
 }
 
 
+/* Number of lines */
+
+function numLines(txt) {
+	let lines = 0;
+	
+	for (let m = 0, n = txt.length; m < n; ++m) {
+		if (txt[m] === '\n') {
+			++lines;
+		}
+	}
+	return lines;
+}

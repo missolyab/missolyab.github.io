@@ -164,13 +164,7 @@ function tenMostFrequent(txt) {
 	}
 	
 	// Count how many times a word appears
-	
-	words = txt.match(/\b(\w+)\b/g);
-	for (let i = 0; i < words.length; i++) {
-		words[i] = words[i].toLowerCase();
-	}
-	words.sort();
-
+/*
     	for (let n = 0; n < keysSorted.length; n++) { // itirating through keysSorted non-doubles array
 		for (let m = 0; m < words.length; m++) { // itirating through WORDS doubles array
 			if (words[m] === keysSorted[n]) {
@@ -180,7 +174,8 @@ function tenMostFrequent(txt) {
 		list.push(keysSorted[n] + "(" + count + ")");
 		count = 0;
 	}
-	return list;
+	*/
+	return keysSorted.length;
 }
 
 
